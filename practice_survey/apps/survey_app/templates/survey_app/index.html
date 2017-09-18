@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="surveys/process" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="placeholder" name="testing">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="location">Location</label>
+        <select name="location" id="location">
+            <option value="seattle">seattle</option>
+            <option value="elsewhere">elsewhere</option>
+        </select>
+        <label for="language">language</label>
+        <select name="language" id="language">
+            <option value="python">python</option>
+            <option value="other">other</option>
+        </select>
+        <textarea name="comment" id="" cols="30" rows="10" placeholder="comments"></textarea>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
