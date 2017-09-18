@@ -10,7 +10,6 @@ def process(request):
         request.session['location'] = request.POST['location']
         request.session['language'] = request.POST['language']
         request.session['comment'] = request.POST['comment']
-        import pdb; pdb.set_trace()
         return redirect('/result')
     return redirect('/')
 
